@@ -158,43 +158,23 @@ namespace _2048game
                             {
                                 fields[i, j] = fields[lastPosition, j];
                                 fields[lastPosition, j] = 0;
-                                lastPosition++;
-                            }
-                            else
-                            {
-                                lastPosition++;
                             }
                         }
                         else
                         {
                             if(fields[lastPosition, j] != 0)
                             {
-                                if(fields[i, j] == fields[lastPosition, j])
+                                if(fields[i, j] == fields[lastPosition, j] && !recentAddition)
                                 {
-                                    if(recentAddition == false)
-                                    {
-
-                                        fields[i, j] += fields[lastPosition, j];
-                                        recentAddition = true;
-                                        fields[lastPosition, j] = 0;
-                                        emptyCount++;
-                                        lastPosition++;
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
+                                    fields[i, j] += fields[lastPosition, j];
+                                    recentAddition = true;
+                                    fields[lastPosition, j] = 0;
+                                    emptyCount++;
                                 }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                lastPosition++;
+                                else break;
                             }
                         }
+                        lastPosition++;
                     }
                 }
             }
@@ -221,43 +201,23 @@ namespace _2048game
                             {
                                 fields[i, j] = fields[lastPosition, j];
                                 fields[lastPosition, j] = 0;
-                                lastPosition--;
-                            }
-                            else
-                            {
-                                lastPosition--;
                             }
                         }
                         else
                         {
                             if(fields[lastPosition, j] != 0)
                             {
-                                if(fields[i, j] == fields[lastPosition, j])
+                                if(fields[i, j] == fields[lastPosition, j] && !recentAddition)
                                 {
-                                    if(recentAddition == false)
-                                    {
-
-                                        fields[i, j] += fields[lastPosition, j];
-                                        recentAddition = true;
-                                        fields[lastPosition, j] = 0;
-                                        emptyCount++;
-                                        lastPosition--;
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
+                                    fields[i, j] += fields[lastPosition, j];
+                                    recentAddition = true;
+                                    fields[lastPosition, j] = 0;
+                                    emptyCount++;
                                 }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                lastPosition--;
+                                else break;
                             }
                         }
+                        lastPosition--;
                     }
                 }
             }
@@ -284,42 +244,23 @@ namespace _2048game
                             {
                                 fields[i, j] = fields[i, lastPosition];
                                 fields[i, lastPosition] = 0;
-                                lastPosition++;
-                            }
-                            else
-                            {
-                                lastPosition++;
                             }
                         }
                         else
                         {
                             if(fields[i, lastPosition] != 0)
                             {
-                                if(fields[i, j] == fields[i, lastPosition])
+                                if(fields[i, j] == fields[i, lastPosition] && !recentAddition)
                                 {
-                                    if(recentAddition == false)
-                                    {
-                                        fields[i, j] += fields[i, lastPosition];
-                                        recentAddition = true;
-                                        fields[i, lastPosition] = 0;
-                                        emptyCount++;
-                                        lastPosition++;
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
+                                    fields[i, j] += fields[i, lastPosition];
+                                    recentAddition = true;
+                                    fields[i, lastPosition] = 0;
+                                    emptyCount++;
                                 }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                lastPosition++;
+                                else break;
                             }
                         }
+                        lastPosition++;
                     }
                 }
             }
@@ -346,42 +287,23 @@ namespace _2048game
                             {
                                 fields[i, j] = fields[i, lastPosition];
                                 fields[i, lastPosition] = 0;
-                                lastPosition--;
                             }
-                            else
-                            {
-                                lastPosition--;
-                            }
+                            lastPosition--;
                         }
                         else
                         {
                             if(fields[i, lastPosition] != 0)
                             {
-                                if(fields[i, j] == fields[i, lastPosition])
+                                if(fields[i, j] == fields[i, lastPosition] && !recentAddition)
                                 {
-                                    if(recentAddition == false)
-                                    {
-
-                                        fields[i, j] += fields[i, lastPosition];
-                                        recentAddition = true;
-                                        fields[i, lastPosition] = 0;
-                                        emptyCount++;
-                                        lastPosition--;
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
+                                    fields[i, j] += fields[i, lastPosition];
+                                    recentAddition = true;
+                                    fields[i, lastPosition] = 0;
+                                    emptyCount++;
                                 }
-                                else
-                                {
-                                    break;
-                                }
+                                else break;
                             }
-                            else
-                            {
-                                lastPosition--;
-                            }
+                            lastPosition--;
                         }
                     }
                 }
